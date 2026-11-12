@@ -3,7 +3,7 @@
 This is fictional customer practice, not a real client interview. One file per
 team. Replace Pending only after a real team decision or observed result.
 
-- Team members / shared repository: Aarav Chopra (ac2928) and Nandish; https://github.com/ac2928/bench-and-bolt
+- Team members / shared repository: Aarav Chopra (ac2928) and Nandish (Denandis; https://github.com/ac2928/bench-and-bolt
 - Selected scenario file and customer: `scenarios/repair-shop.md`, Maya Chen, Bench & Bolt (bike repair).
 - Current stage / next conversation: Review 1 Plan done. Next conversation: change request after the first slice works.
 - Authoritative spec link: [SPEC.md](../SPEC.md)
