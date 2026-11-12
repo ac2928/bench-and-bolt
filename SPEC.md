@@ -2,7 +2,7 @@
 
 ## Project & status
 
-- **Team:** Aarav Chopra (ac2928), Nandish
+- **Team:** Aarav Chopra (ac2928), Nandish (Denandis)
 - **Repo:** https://github.com/ac2928/bench-and-bolt
 - **Customer (simulated):** Maya Chen, Bench & Bolt bike repair, from `customer-kit/scenarios/repair-shop.md`
 - **Customer agreement:** [customer-kit/CUSTOMER-NOTES.md](customer-kit/CUSTOMER-NOTES.md)
