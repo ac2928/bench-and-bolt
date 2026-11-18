@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Request checked · Bench &amp; Bolt{% endblock %}
+{% block content %}
+<h1>Request is valid</h1>
+<p class="note">Saving to the queue is not connected yet (Member B's part). Nothing has been stored.</p>
+<ul>
+  <li>Rider: {{ values.rider_label }}</li>
+  <li>Bike type: {{ values.bike_type }}</li>
+  <li>Problem: {{ values.problem }}</li>
+  <li>Preferred day: {{ values.preferred_day or "none given" }} (not a booking)</li>
+</ul>
+<p><a href="/new">Enter another request</a></p>
+{% endblock %}
