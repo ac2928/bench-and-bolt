@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}New repair request · Bench &amp; Bolt{% endblock %}
+{% block content %}
+<h1>New repair request</h1>
+<p class="note">For staff entering a walk-in request. Use a made-up rider label, not a real name.</p>
+{% if errors %}<p class="error" role="alert">Nothing was saved. Fix the fields marked below.</p>{% endif %}
+<form method="post" novalidate>
+  <label for="rider_label">Rider label</label>
+  <input id="rider_label" name="rider_label" value="{{ values.rider_label or '' }}" maxlength="30">
+  {% if errors.rider_label %}<p class="error">{{ errors.rider_label }}</p>{% endif %}
+
+  <label for="bike_type">Bike type</label>
+  <select id="bike_type" name="bike_type">
+    <option value="">Choose…</option>
+    {% for t in bike_types %}<option value="{{ t }}" {% if values.bike_type == t %}selected{% endif %}>{{ t|capitalize }}</option>{% endfor %}
+  </select>
+  {% if errors.bike_type %}<p class="error">{{ errors.bike_type }}</p>{% endif %}
+
+  <label for="problem">Problem</label>
+  <textarea id="problem" name="problem" rows="4">{{ values.problem or '' }}</textarea>
+  <p class="hint">Required. Up to 240 characters.</p>
+  {% if errors.problem %}<p class="error">{{ errors.problem }}</p>{% endif %}
+
+  <label for="preferred_day">Preferred day (optional)</label>
+  <input id="preferred_day" name="preferred_day" value="{{ values.preferred_day or '' }}">
+  <p class="hint">What the rider would like. This is not a booked appointment.</p>
+  {% if errors.preferred_day %}<p class="error">{{ errors.preferred_day }}</p>{% endif %}
+
+  <button type="submit">Check request</button>
+</form>
+{% endblock %}
